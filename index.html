@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planit — Just plan it</title>
+  <meta name="description" content="Planit landing page preview converted to HTML, CSS, and JavaScript." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="progress-track">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-logo">P</div>
+        <div>
+          <div class="brand-name">Planit</div>
+          <div class="brand-tag">Just plan it</div>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#install">Install</a>
+        <a href="#why">Why Planit</a>
+      </nav>
+
+      <a class="btn btn-primary btn-sm" href="#install">Get early access</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid" id="heroWrap">
+        <div class="hero-copy fade-up show">
+          <div class="hero-pill fade-up show delay-1">
+            <span class="hero-dot"></span>
+            Social planning, without the chaos
+          </div>
+
+          <h1 class="hero-title fade-up show delay-2">
+            Tired of calling the whole group for a drink?
+          </h1>
+
+          <p class="hero-text fade-up show delay-3">
+            Invite everyone at once. Planit helps you create simple invites for drinks, dinners, and last-minute plans — then keeps track of who’s in, who’s pending, and what expired.
+          </p>
+
+          <div class="hero-actions fade-up show delay-4">
+            <a class="btn btn-primary" href="https://planit-app-nine.vercel.app/dashboard" target="_blank" rel="noreferrer">
+              Just plan it
+              <span class="btn-arrow">›</span>
+            </a>
+            <a class="btn btn-secondary" href="#how">See how it works</a>
+          </div>
+
+          <div class="hero-tags fade-up show delay-5">
+            <span>PWA install</span>
+            <span>Live responses</span>
+            <span>Reminder alerts</span>
+            <span>Clean dashboard</span>
+          </div>
+        </div>
+
+        <div class="phone-shell reveal-on-scroll" id="phoneCard">
+          <div class="phone-glow"></div>
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="phone-topbar">
+                <span>9:41</span>
+                <span>Planit</span>
+              </div>
+
+              <div class="invite-card">
+                <div class="invite-top">
+                  <div>
+                    <div class="invite-label">Tonight’s plan</div>
+                    <div class="invite-title">Drinks at 9?</div>
+                  </div>
+                  <div class="live-pill">LIVE</div>
+                </div>
+
+                <div class="invite-meta">
+                  <div class="meta-row">📍 ABC Rooftop</div>
+                  <div class="meta-row">🕘 Friday • 9:00 PM</div>
+                  <div class="meta-row">💬 Casual drinks. Come through.</div>
+                </div>
+              </div>
+
+              <div class="stats-grid">
+                <div class="stat-box">
+                  <div class="stat-label">Accepted</div>
+                  <div class="stat-value">8</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">Pending</div>
+                  <div class="stat-value">4</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">Expired</div>
+                  <div class="stat-value">1</div>
+                </div>
+              </div>
+
+              <div class="contact-list">
+                <div class="contact-card">
+                  <div class="contact-left">
+                    <div class="avatar">M</div>
+                    <div>
+                      <div class="contact-name">Mia</div>
+                      <div class="contact-sub">Invite sent</div>
+                    </div>
+                  </div>
+                  <div class="status accepted">Accepted</div>
+                </div>
+
+                <div class="contact-card">
+                  <div class="contact-left">
+                    <div class="avatar">J</div>
+                    <div>
+                      <div class="contact-name">Jordan</div>
+                      <div class="contact-sub">Invite sent</div>
+                    </div>
+                  </div>
+                  <div class="status neutral">Pending</div>
+                </div>
+
+                <div class="contact-card">
+                  <div class="contact-left">
+                    <div class="avatar">C</div>
+                    <div>
+                      <div class="contact-name">Chris</div>
+                      <div class="contact-sub">Invite sent</div>
+                    </div>
+                  </div>
+                  <div class="status accepted">Accepted</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-intro reveal-on-scroll">
+          <div class="eyebrow">Features</div>
+          <h2>A faster way to make plans actually happen.</h2>
+          <p>
+            Planit turns group planning into one clean flow: choose people, send the invite, and instantly see who’s coming.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="glass-card reveal-on-scroll">
+            <div class="feature-icon">👥</div>
+            <h3>Invite everyone in one go</h3>
+            <p>Add a friend’s name and number once, save them, and send the same invite to everyone at the same time.</p>
+          </article>
+
+          <article class="glass-card reveal-on-scroll">
+            <div class="feature-icon">🔔</div>
+            <h3>Real-time responses</h3>
+            <p>If your friend already has Planit, they get the invite in the app with a real notification and can respond right away.</p>
+          </article>
+
+          <article class="glass-card reveal-on-scroll">
+            <div class="feature-icon">⏰</div>
+            <h3>Smart reminders</h3>
+            <p>Keep the night moving with automatic reminders before the event starts.</p>
+          </article>
+
+          <article class="glass-card reveal-on-scroll">
+            <div class="feature-icon">📍</div>
+            <h3>Place, time, message</h3>
+            <p>Send the full plan in one clean invite with the location, time, and your message.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section section-alt">
+      <div class="container two-col">
+        <div class="section-intro reveal-on-scroll">
+          <div class="eyebrow">How it works</div>
+          <h2>One smooth flow from idea to invite.</h2>
+          <p>
+            Designed for nights out, quick meetups, and spontaneous group plans that usually die in the chat.
+          </p>
+        </div>
+
+        <div class="steps-list">
+          <div class="step-card reveal-on-scroll">
+            <div class="step-number">1</div>
+            <div>
+              <div class="step-title">Save your friends once</div>
+              <div class="step-text">Because Planit is a PWA, it cannot access phone contacts directly. You add a friend’s name and number once, then it stays saved for next time.</div>
+            </div>
+          </div>
+
+          <div class="step-card reveal-on-scroll">
+            <div class="step-number">2</div>
+            <div>
+              <div class="step-title">Add the place, time, and quick message</div>
+              <div class="step-text">Keep it simple and clear in seconds.</div>
+            </div>
+          </div>
+
+          <div class="step-card reveal-on-scroll">
+            <div class="step-number">3</div>
+            <div>
+              <div class="step-title">Send one invite to the whole group</div>
+              <div class="step-text">If your friend has Planit, they receive the invite inside the app with a notification. If not, you can share it by text or another platform so they can install it and join.</div>
+            </div>
+          </div>
+
+          <div class="step-card reveal-on-scroll">
+            <div class="step-number">4</div>
+            <div>
+              <div class="step-title">Track accepted, pending, and expired invites</div>
+              <div class="step-text">See who accepted, who is still pending, and which invites expired after the event time passes.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="install" class="section">
+      <div class="container install-grid">
+        <div class="section-intro reveal-on-scroll">
+          <div class="eyebrow">Install Planit</div>
+          <h2>Open it in Safari. Add it to your home screen. Turn on notifications.</h2>
+          <p>
+            Planit works like an app, but it is installed from the browser. For the best experience, open it in Safari, tap Share, then tap Add to Home Screen. When you log in, use your email and phone number as your ID so friends can send you invites.
+          </p>
+        </div>
+
+        <div class="install-card reveal-on-scroll">
+          <div class="install-step"><span>1</span><p>Open Planit in Safari on your iPhone</p></div>
+          <div class="install-step"><span>2</span><p>Tap the Share button</p></div>
+          <div class="install-step"><span>3</span><p>Choose Add to Home Screen</p></div>
+          <div class="install-step"><span>4</span><p>Log in with your email and phone number</p></div>
+          <div class="install-step"><span>5</span><p>Allow notifications for real invite alerts</p></div>
+
+          <div class="install-note">
+            Friends already on Planit get the invite in-app. Friends not in the system yet can receive a shared invite through text message or another platform, install Planit, and then get the invite too.
+          </div>
+
+          <a class="btn btn-primary" href="https://planit-app-nine.vercel.app/dashboard" target="_blank" rel="noreferrer">
+            Open Planit
+            <span class="btn-arrow">›</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <div class="container">
+        <div class="why-card reveal-on-scroll">
+          <div class="why-grid">
+            <div>
+              <div class="eyebrow">Why Planit</div>
+              <h2>Less friction. More yes.</h2>
+              <p>
+                Planit gives social plans a home of their own — beyond messy chats, missed calls, and endless back-and-forth.
+              </p>
+            </div>
+
+            <div class="mini-grid">
+              <div class="mini-card"><div class="mini-icon">💬</div><div>Cleaner than group chats</div></div>
+              <div class="mini-card"><div class="mini-icon">✅</div><div>Built for quick decisions</div></div>
+              <div class="mini-card"><div class="mini-icon">📱</div><div>Designed for mobile first</div></div>
+              <div class="mini-card"><div class="mini-icon">✨</div><div>Made to feel effortless</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand">
+        <div class="brand-logo">P</div>
+        <div>
+          <div class="brand-name">Planit</div>
+          <div class="brand-tag">Just plan it</div>
+        </div>
+      </div>
+      <div class="copyright">Copyright planit@2026</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
