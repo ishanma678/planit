@@ -43,6 +43,29 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, transparent 0 44%, rgba(0, 0, 0, 0.035) 44% 45%, transparent 45% 100%),
+    linear-gradient(65deg, transparent 0 48%, rgba(59, 130, 246, 0.05) 48% 49%, transparent 49% 100%);
+  background-size: 220px 220px, 260px 260px;
+  animation: driftGrid 24s linear infinite;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto 0 0;
+  height: 45vh;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(246, 246, 247, 0.94));
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -161,7 +184,7 @@ button {
 }
 
 .hero {
-  padding: 82px 0 58px;
+  padding: 88px 0 96px;
 }
 
 .hero-layout {
@@ -228,7 +251,8 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 28px;
+  margin-top: 30px;
+  margin-bottom: 18px;
 }
 
 .hero-proof span {
@@ -549,7 +573,8 @@ h1 {
 }
 
 .stats-strip {
-  padding: 18px 0 42px;
+  padding: 6px 0 58px;
+  margin-top: -36px;
 }
 
 .stats-grid {
@@ -819,6 +844,125 @@ h1 {
   top: 112px;
 }
 
+.workflow-visual {
+  position: relative;
+  margin-top: 28px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 32px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.56)),
+    var(--white);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.workflow-visual::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border-radius: 26px;
+  background:
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.045) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.035) 0 1px, transparent 1px 44px);
+  opacity: 0.45;
+}
+
+.workflow-phone {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 310px);
+  margin: 0 auto;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background: var(--white);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.1);
+}
+
+.workflow-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.workflow-card {
+  padding: 14px;
+  margin-top: 10px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--soft);
+}
+
+.workflow-card.active {
+  background: var(--black);
+  color: var(--white);
+}
+
+.workflow-card small,
+.workflow-card strong,
+.workflow-card p {
+  display: block;
+}
+
+.workflow-card small {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.workflow-card.active small,
+.workflow-card.active p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.workflow-card strong {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.workflow-card p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.workflow-pulse {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.workflow-pulse span {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--black);
+  opacity: 0.22;
+  animation: floatPin 4.8s ease-in-out infinite;
+}
+
+.workflow-pulse span:nth-child(1) {
+  top: 20%;
+  left: 18%;
+}
+
+.workflow-pulse span:nth-child(2) {
+  top: 58%;
+  right: 16%;
+  animation-delay: 1.1s;
+}
+
+.workflow-pulse span:nth-child(3) {
+  bottom: 18%;
+  left: 28%;
+  animation-delay: 2.2s;
+}
+
 .steps-column {
   display: grid;
   gap: 14px;
@@ -857,6 +1001,16 @@ h1 {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.65;
+}
+
+.step-card ul {
+  display: grid;
+  gap: 6px;
+  margin: 14px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 .feature-grid {
@@ -1033,6 +1187,29 @@ h1 {
   transform: translateY(0);
 }
 
+@keyframes driftGrid {
+  from {
+    background-position: 0 0, 0 0;
+  }
+
+  to {
+    background-position: 220px 220px, -260px 260px;
+  }
+}
+
+@keyframes floatPin {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.16;
+  }
+
+  50% {
+    transform: translate3d(10px, -14px, 0) scale(1.45);
+    opacity: 0.36;
+  }
+}
+
 @media (max-width: 1080px) {
   .hero-layout {
     grid-template-columns: 1fr;
@@ -1112,7 +1289,7 @@ h1 {
   }
 
   .hero {
-    padding: 46px 0 34px;
+    padding: 46px 0 48px;
   }
 
   .hero-logo {
@@ -1141,6 +1318,11 @@ h1 {
     min-height: auto;
     display: grid;
     gap: 14px;
+  }
+
+  .stats-strip {
+    margin-top: 0;
+    padding-top: 0;
   }
 
   .spatial-stage::before {
@@ -1182,6 +1364,10 @@ h1 {
 
   .step-card {
     grid-template-columns: 1fr;
+  }
+
+  .workflow-visual {
+    margin-top: 22px;
   }
 
   .install-card-large,
