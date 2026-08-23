@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ishanma678.github.io/planit/sitemap.xml
